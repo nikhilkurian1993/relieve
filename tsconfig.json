@@ -1,0 +1,85 @@
+{
+  "ts-node": {
+    // Do not forget to `npm i -D tsconfig-paths`
+    "require": ["tsconfig-paths/register"],
+    "swc": true
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext", "es5", "esnext.asynciterable"],
+    "allowJs": true,
+    "types": ["node"],
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@class/*": ["class/*"],
+      "@components/*": ["components/*"],
+      "@componentsV3/*": ["/componentsV3/*"],
+      "@constants/*": ["constants/*"],
+      "@context/*": ["components/context/*"],
+      "@contextV3/*": ["context/*"],
+      "@styles/*": ["components/styles/*"],
+      "@styles/V3/*": ["componentsV3/styles/*"],
+      "@layouts/*": ["components/layouts/*"],
+      "@ui/*": ["components/ui/*"],
+      "@website/*": ["components/website/*"],
+      "@email/*": ["email/*"],
+      "@graphql/*": ["graphql/*"],
+      "@helper/*": ["helper/*"],
+      "@hook/*": ["hook/*"],
+      "@lib/*": ["lib/*"],
+      "@libV3/*": ["libV3/*"],
+      "@pages/*": ["pages/*"],
+      "@api/*": ["pages/api/*"],
+      "@dashboard/*": ["pages/dashboard/*"],
+      "@marketplace/*": ["pages/marketplace/*"],
+      "@admin/*": ["pages/admin/*"],
+      "@prisma/*": ["prisma/*"],
+      "@service/*": ["service/*"],
+      "@customTypes/*": ["types/*"],
+      "@utils/*": ["utils/*"],
+      "@fonts/*": ["fonts/*"],
+      "@keepers/*": ["components/*"]
+    },
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "module": "esnext",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "outDir": "./.next",
+    "moduleResolution": "node",
+    "removeComments": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "plugins": [
+      {
+        "name": "next"
+      },
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
+    /* Module Resolution */
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "componentsV3/admin/RefundPhasePopup.tsx"
+  ],
+  "exclude": ["node_modules", ".sentryclirc", ".next", "next.config.js"]
+}
